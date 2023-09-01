@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
-bool func(int x) {
+typedef unsigned long ulong;
+bool func(ulong x) {
 	for (int i = 2; i * i <= x; ++i) {
 		if (x % i == 0) {
 			return false;
@@ -9,9 +10,9 @@ bool func(int x) {
 	return true;
 
 }
-std::vector<int> factors(int x) {
-	std::vector<int> factors;
-	for (int i = 2; i <= x; ++i) {
+std::vector<ulong> factors(ulong x) {
+	std::vector<ulong> factors;
+	for (ulong i = 2; i <= x; ++i) {
 		if (x % i == 0 && func(i)) {
 			factors.push_back(i);
 		}
@@ -19,13 +20,12 @@ std::vector<int> factors(int x) {
 	return factors;
 }
 int main() {
-	std::cout << "lol papa give so ez program give hard when come to home" << "\n";
-	int x;
-        std::cout << "Enter Number: ";
+	ulong x;
+	std::cout << "Enter Number: ";
 	std::cin >> x;
 	auto primeFactorlist = factors(x);
 	std::cout << "The Factors And Prime Are as Followed:- ";
-	for (int i : primeFactorlist) {
+	for (ulong i : primeFactorlist) {
 		std::cout << i << ',';
 	}
 	std::cin.get();
