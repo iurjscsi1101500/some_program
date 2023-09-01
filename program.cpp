@@ -21,7 +21,7 @@ std::vector<int> factors(int x) {
 int main() {
 	std::cout << "lol papa give so ez program give hard when come to home" << "\n";
 	int x;
-        std::cout << "Enter Number: "
+        std::cout << "Enter Number: ";
 	std::cin >> x;
 	auto primeFactorlist = factors(x);
 	std::cout << "The Factors And Prime Are as Followed:- ";
